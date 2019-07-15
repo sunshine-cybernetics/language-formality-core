@@ -1,0 +1,121 @@
+'fileTypes' : [
+  'fmc'
+]
+'name' : 'Formality-Core'
+'patterns' : [
+  {
+    'include' : '#main'
+  }
+]
+'scopeName' : 'source.fmc'
+'uuid' : ''
+'repository' : {
+  'main' : {
+    'patterns' : [
+      {
+        'include' : '#keyword'
+      }
+      {
+        'include' : '#punctuations'
+      }
+      {
+        'include' : '#numeric'
+      }
+      {
+        'match' : '(\\bdef\\s.*:)'
+        'name' : 'meta.function.fmc'
+      }
+      {
+        'match' : '(\\blet\\s|\\bdup\\s|\\bcpy\\s|\\bget\\s|\\bsnd\\s|\\bfst\\s)'
+        'name' : 'storage.type.fmc'
+      }
+      {
+        'match' : '(\\blet\\s|\\bdup\\s|\\bcpy\\s|\\bget\\s|\\bsnd\\s|\\bfst\\s)'
+        'name' : 'variable.language.fmc'
+      }
+      {
+        'begin' : '(\\")'
+        'beginCaptures' : {
+          '1' : {
+            'name' : 'string.fmc'
+          }
+        }
+        'contentName' : 'string.fmc'
+        'end' : '(\\")'
+        'endCaptures' : {
+          '1' : {
+            'name' : 'string.fmc'
+          }
+        }
+      }
+      {
+        'match' : '(//.*)'
+        'name' : 'comment.line.double-slash.fmc'
+      }
+    ]
+  }
+  'keyword' : {
+    'patterns' : [
+      {
+        'match' : '(\\bdef\\s)'
+        'name' : 'keyword.fmc'
+      }
+      {
+        'match' : '(<=|>=|==|<|>|!=|&)'
+        'name' : 'keyword.operator.logical.fmc'
+      }
+      {
+        'match' : '(-|\\+|\\*|\\%|(\\w|\\s)/(\\w|\\s))'
+        'name' : 'keyword.operator.arithmetic.fmc'
+      }
+      {
+        'match' : '(\\bif\\s|\\bthen[\\s\\x{007c}\\:]|\\belse[\\s\\x{007c}\\:])'
+        'name' : 'keyword.conditional.fmc'
+      }
+    ]
+  }
+  'main__1' : {
+    'patterns' : [
+    ]
+  }
+  'numeric' : {
+    'patterns' : [
+      {
+        'match' : '(\\b[01]+\\b)'
+        'name' : 'constant.numeric.integer.binary.fmc'
+      }
+      {
+        'match' : '(^0[0-7]+$)'
+        'name' : 'constant.numeric.integer.octal.fmc'
+      }
+      {
+        'match' : '(^[\\d.]+$)'
+        'name' : 'constant.numeric.integer.decimal.fmc'
+      }
+      {
+        'match' : '(0[a-z\\x\\x{007b}007c\\x{007d}A-Z][0-9a-fA-F]+)'
+        'name' : 'constant.numeric.integer.hexadecimal.fmc'
+      }
+      {
+        'match' : '(\\b[\\x\\x{007b}002b\\x{007d}-]?([0-9]*[.])?[0-9]+)'
+        'name' : 'constant.numeric.float.fmc'
+      }
+    ]
+  }
+  'punctuations' : {
+    'patterns' : [
+      {
+        'match' : '(#|~)'
+        'name' : 'punctuation.definition.variable.fmc'
+      }
+      {
+        'match' : '(:|=)'
+        'name' : 'punctuation.definition.function.fmc'
+      }
+      {
+        'match' : '(\\[|\\]|\\{|\\}|\\(|\\)|\\|)'
+        'name' : 'punctuation.section.group.begin.fmc'
+      }
+    ]
+  }
+}
