@@ -1,10 +1,10 @@
 {
   "name": "language-formality-core",
   "main": "./lib/language-formality-core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Formality-Core language support in Atom",
   "keywords": [],
-  "repository": "https://github.com/moonad/language-formality-core.git",
+  "repository": "https://github.com/sunshine-cybernetics/language-formality-core.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
