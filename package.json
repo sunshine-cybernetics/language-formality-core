@@ -1,7 +1,7 @@
 {
   "name": "language-formality-core",
   "main": "./lib/language-formality-core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Formality-Core language support in Atom",
   "keywords": [],
   "repository": "https://github.com/sunshine-cybernetics/language-formality-core.git",
